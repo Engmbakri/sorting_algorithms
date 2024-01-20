@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - function to swap array items
+ * swap - function to swap array element
  * @a: int element
  * @b: int element
  * Return: void
@@ -14,30 +14,24 @@ void swap(int *a, int *b)
 }
 
 /**
- * bubble_sort - function implements the Bubble Sort algorithm
- * @array: pointert to array
+ * bubble_sort - fuction sort the array using Bubble sort algorithm
+ * @array: pointer to array
  * @size: array size
+ * Return: void
 */
-
 void bubble_sort(int *array, size_t size)
 {
-	size_t x;
-	size_t y;
-	size_t z;
+	size_t i;
+	size_t j;
 
-	for (x = 0; x < size - 1; x++)
+	for (i = 0; i < size - 1; i++)
 	{
-		for (y = 0; y < size - x - 1; y++)
+		for (j = 0; j < size - i - 1; j++)
 		{
-			if (array[y] > array[y + 1])
+			if (array[j] > array[j + 1])
 			{
-				swap(&array[y], &array[y + 1]);
-				printf("Swap: ");
-				for (z = 0; z < size; z++)
-				{
-					printf("%d ", array[z]);
-				}
-				printf("\n");
+				swap(&array[j], &array[j + 1]);
+				print_array(array, size);
 			}
 		}
 	}
