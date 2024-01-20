@@ -1,4 +1,4 @@
-#include <sort.h>
+#include "sort.h"
 
 /**
  * swap - function to swap array items
@@ -21,17 +21,21 @@ void swap(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	for (size_t i = 0; i < size - 1; i++)
+	size_t x;
+	size_t y;
+	size_t z;
+
+	for (x = 0; x < size - 1; x++)
 	{
-		for (size_t j = 0; j < size - i - 1; j++)
+		for (y = 0; y < size - x - 1; y++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[y] > array[y + 1])
 			{
-				swap(&array[j], &array[j + 1]);
+				swap(&array[y], &array[y + 1]);
 				printf("Swap: ");
-				for (size_t k = 0; k < size; k++)
+				for (z = 0; z < size; z++)
 				{
-					printf("%d ", array[k]);
+					printf("%d ", array[z]);
 				}
 				printf("\n");
 			}
