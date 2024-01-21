@@ -1,0 +1,3 @@
+Best case: O(n log n) - Occurs when the partitioning is balanced
+Average case: O(n log n) - Average performance over all possible input data
+Worst case: O(n^2) - Occurs when the partitioning is unbalanced, and the pivot is always the smallest or largest element
