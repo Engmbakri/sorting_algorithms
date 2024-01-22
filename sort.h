@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -29,5 +30,10 @@ void quick_sort(int *array, size_t size);
 void quick_sort_recursive(int *array, int low, int high);
 int lomuto_partition(int *array, int low, int high);
 void shell_sort(int *array, size_t size);
+int find_max(int *array, size_t size);
+int *create_counting_array(int max);
+void print_counting_array(int *counting_array, int max);
+void update_array(int *array, int *counting_array, int max);
+void counting_sort(int *array, size_t size);
 
 #endif /* SORT_H */
