@@ -34,12 +34,13 @@ int find_max(int *array, size_t size);
 int *create_counting_array(int max);
 void print_counting_array(int *counting_array, int max);
 void update_array(int *array, int *counting_array, int max);
-void counting_sort(int *array, size_t size);
 void print_merge_step(int *array, size_t size);
 void merge(int *array, int *left, size_t left_size,
 		int *right, size_t right_size);
 void merge_sort(int *array, size_t size);
 void heapify(int *array, size_t size, size_t root);
 void heap_sort(int *array, size_t size);
+void counting_sort(int *array, size_t size, int exp);
+void radix_sort(int *array, size_t size);
 
 #endif /* SORT_H */
